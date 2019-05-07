@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const post = await Posts.add(req.body);
+        const post = await Posts.insert(req.body);
         res.status(201).json(post);
     } catch (error) {
         console.log(error);
